@@ -1,0 +1,54 @@
+
+db.products.insert({
+    "title": "Longboard", 
+    "price": 75.00, 
+    "imgUrl": "https://images.unsplash.com/photo-1529153510182-75ced468f736?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    });
+db.products.insert({
+    "title": "Wheels", 
+    "price": 20.00,
+    "imgUrl": "https://images.pexels.com/photos/5845029/pexels-photo-5845029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    });
+
+db.products.insert({
+    "title": "Skateboard",
+    "price": 50.00,
+    "imgUrl": "https://images.pexels.com/photos/165236/pexels-photo-165236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    });
+db.products.insert({
+    "title": "Autre"
+    , "price": 15.00,
+    "imgUrl": "%PUBLIC_URL%/images/miscellanious.jpg"
+    });
+
+
+const y = [
+    {
+        "likes": 0,
+        "_id": "63093b543389962cc121fc5d",
+        "title": "Longboard",
+        "price": 75,
+        "imgUrl": "https://images.unsplash.com/photo-1529153510182-75ced468f736?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+        "likes": 0,
+        "_id": "63093b543389962cc121fc5e",
+        "title": "Wheels",
+        "price": 20,
+        "imgUrl": "https://images.pexels.com/photos/5845029/pexels-photo-5845029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "likes": 0,
+        "_id": "63093b543389962cc121fc5f",
+        "title": "Skateboard",
+        "price": 50,
+        "imgUrl": "https://images.pexels.com/photos/165236/pexels-photo-165236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "likes": 0,
+        "_id": "63093b553389962cc121fc60",
+        "title": "Autre",
+        "price": 15,
+        "imgUrl": "%PUBLIC_URL%/images/miscellanious.jpg"
+    }
+];

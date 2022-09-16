@@ -1,0 +1,16 @@
+.product {
+    width: 15rem;
+}
+
+.product img {
+    max-height: 10rem;
+}
+
+.wishlisted {
+    background-color: orangered;
+}
+
+.wishlisted:hover {
+    background-color: rgba(255, 68, 0, 0.843);
+
+}
