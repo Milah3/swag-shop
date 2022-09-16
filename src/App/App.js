@@ -76,9 +76,9 @@ function App() {
 		return list;
 	};
 
-	useEffect(() => {
-		loadProducts();
-	}, []);
+	// useEffect(() => {
+	// 	loadProducts();
+	// }, []);
 
 	return (
 		<div className="App">
