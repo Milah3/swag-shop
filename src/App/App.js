@@ -53,8 +53,10 @@ function App() {
 			data => {
 				if (data && data.isArray()) {
 					setProducts(data);
+					console.log(products);
 				} else {
 					setProducts([...MOCKDATA]);
+					console.log(products);
 				}
 			},
 			err => {
