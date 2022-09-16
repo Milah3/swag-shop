@@ -13,8 +13,6 @@
     "whatwg-fetch": "^3.6.2"
   },
   
-
-  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

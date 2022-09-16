@@ -18,7 +18,9 @@ const ds = new DataService();
 const notify = new NotificationService();
 
 function App() {
-	const [products, setProducts] = useState([
+	const [products, setProducts] = useState([]);
+
+	const MOCKDATA = [
 		// MOCK DATA
 		{
 			likes: 0,
@@ -48,19 +50,23 @@ function App() {
 			price: 15,
 			imgUrl: "%PUBLIC_URL%/images/miscellanious.jpg"
 		}
-	]);
+	];
 
 	// FETCH DATA FROM REAL API IF NEEDED
-	// const loadProducts = () => {
-	// 	http.getData("http://localhost:3000/products").then(
-	// 		data => {
-	// 			setProducts(data);
-	// 		},
-	// 		err => {
-	// 			console.log("Unable to fetch product data from the API", err);
-	// 		}
-	// 	);
-	// };
+	const loadProducts = () => {
+		http.getData("http://localhost:3000/products").then(
+			data => {
+				if (data && data.isArray()) {
+					setProducts(data);
+				} else {
+					setProducts(MOCKDATA);
+				}
+			},
+			err => {
+				console.log("Unable to fetch product data from the API", err);
+			}
+		);
+	};
 
 	const productList = () => {
 		const list = products.map(product => {
@@ -73,9 +79,9 @@ function App() {
 		return list;
 	};
 
-	// useEffect(() => {
-	// 	loadProducts();
-	// }, []);
+	useEffect(() => {
+		loadProducts();
+	}, []);
 
 	return (
 		<div className="App">
