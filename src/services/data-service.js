@@ -26,7 +26,6 @@ class DataService {
 		if (!wishList.includes(item)) {
 			wishList.push(item);
 			console.log(wishList);
-			ns.postNotification(NOTIF_WISHLIST_CHANGED, wishList);
 		}
 	}
 
@@ -34,7 +33,7 @@ class DataService {
 		for (let x = 0; x < wishList.length; x++) {
 			if (item._id === wishList[x]._id) {
 				wishList.splice(x, 1);
-				ns.postNotification(NOTIF_WISHLIST_CHANGED, wishList);
+				// ns.postNotification(NOTIF_WISHLIST_CHANGED, wishList);
 				break;
 			}
 		}

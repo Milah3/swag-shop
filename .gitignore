@@ -11,7 +11,12 @@
 # production
 /build
 
-data.json
+
+# Autres
+/public/data.json
+*/setUpTests.js
+*/reportWebVitals.js
+
 
 # misc
 .DS_Store
