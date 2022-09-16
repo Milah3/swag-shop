@@ -43,6 +43,7 @@ function WishList(props) {
 	useEffect(() => {
 		ns.addObserver(NOTIF_WISHLIST_CHANGED, inputRef.current, data => {
 			setWishList([...data]);
+			console.log("data received", wishList);
 		});
 		return () => {
 			console.log("component has unmounted!");

@@ -13,8 +13,6 @@ import WishList from "../wishlist/wishlist";
 const http = new HttpService();
 
 function App() {
-	const [products, setProducts] = useState(MOCKDATA);
-
 	// MOCK DATA
 	const MOCKDATA = [
 		{
@@ -46,6 +44,8 @@ function App() {
 			imgUrl: "./public/images/miscellanious.jpg"
 		}
 	];
+
+	const [products, setProducts] = useState(MOCKDATA);
 
 	// FETCH DATA FROM REAL API IF NEEDED
 	const loadProducts = () => {
