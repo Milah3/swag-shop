@@ -1,27 +1,22 @@
 import logo from "../logo.svg";
 import "./App.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Services
 import HttpService from "../services/http-service";
-import NotificationService from "../services/notification-service";
-import { NOTIF_WISHLIST_CHANGED } from "../services/notification-service";
 
 // Components
 import Product from "../product/product";
 import WishList from "../wishlist/wishlist";
-import DataService from "../services/data-service";
 
 // Initialization
 const http = new HttpService();
-const ds = new DataService();
-const notify = new NotificationService();
 
 function App() {
-	const [products, setProducts] = useState([]);
+	const [products, setProducts] = useState(MOCKDATA);
 
+	// MOCK DATA
 	const MOCKDATA = [
-		// MOCK DATA
 		{
 			likes: 0,
 			_id: "63093b543389962cc121fc5d",
@@ -48,7 +43,7 @@ function App() {
 			_id: "63093b553389962cc121fc60",
 			title: "Autre",
 			price: 15,
-			imgUrl: "%PUBLIC_URL%/images/miscellanious.jpg"
+			imgUrl: "./public/images/miscellanious.jpg"
 		}
 	];
 
@@ -59,7 +54,7 @@ function App() {
 				if (data && data.isArray()) {
 					setProducts(data);
 				} else {
-					setProducts(MOCKDATA);
+					setProducts([...MOCKDATA]);
 				}
 			},
 			err => {
